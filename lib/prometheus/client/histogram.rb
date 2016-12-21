@@ -26,7 +26,7 @@ module Prometheus
           @total += 1
 
           each_key do |bucket|
-            self[bucket] += 1 if value <= bucket
+            self[bucket] += 1 if bucket <= value
           end
         end
       end
